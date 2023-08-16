@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.SettingsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins"
+                android:paddingStart="10dp"
+                android:text="Settings"
+                android:textColor="#DD81FF"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:visibility="gone"
+                android:src="@drawable/search" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/native_ad"
+            android:layout_below="@id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Account"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp">
+
+                    <ImageView
+                        android:id="@+id/profile_pic"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/profile"
+                        android:background="@drawable/profile_bg"
+                        android:padding="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:text="UserName"
+                            android:textColor="@color/blacktwo"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/user_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:text="user@abc.com"
+                            android:textColor="@color/greyt"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/edit_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/edit"
+                        android:textColor="@color/pink"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Settings"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/share"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/refer_icon"
+                        android:drawablePadding="35dp"
+                        android:fontFamily="@font/poppins"
+                        android:padding="20dp"
+                        android:text="Refer a Friend"
+                        android:textColor="@color/blacktwo"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blacktwo"
+                        android:alpha="0.2"/>
+
+                    <TextView
+                        android:id="@+id/notifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/notification"
+                        android:drawableTint="@color/blacktwo"
+                        android:drawablePadding="35dp"
+                        android:fontFamily="@font/poppins"
+                        android:padding="20dp"
+                        android:visibility="gone"
+                        android:text="Notification"
+                        android:textColor="@color/blacktwo"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:background="@color/blacktwo"
+                        android:alpha="0.2"/>
+
+                    <TextView
+                        android:id="@+id/feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/send_feedback"
+                        android:drawablePadding="35dp"
+                        android:fontFamily="@font/poppins"
+                        android:padding="20dp"
+                        android:text="Send Feedback"
+                        android:textColor="@color/blacktwo"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blacktwo"
+                        android:alpha="0.2"/>
+
+                    <TextView
+                        android:id="@+id/pp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/privacy"
+                        android:drawablePadding="35dp"
+                        android:fontFamily="@font/poppins"
+                        android:padding="20dp"
+                        android:text="Privacy &amp; Security"
+                        android:textColor="@color/blacktwo"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:background="@color/blacktwo"
+                        android:alpha="0.2"/>
+
+                    <TextView
+                        android:id="@+id/about"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/about_us"
+                        android:drawablePadding="35dp"
+                        android:fontFamily="@font/poppins"
+                        android:padding="20dp"
+                        android:visibility="gone"
+                        android:text="About Us"
+                        android:textColor="@color/blacktwo"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:background="@color/blacktwo"
+                        android:alpha="0.2"/>
+
+                    <TextView
+                        android:id="@+id/tc"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/t_c"
+                        android:drawablePadding="35dp"
+                        android:fontFamily="@font/poppins"
+                        android:visibility="gone"
+                        android:padding="20dp"
+                        android:text="Terms &amp; Conditions"
+                        android:textColor="@color/blacktwo"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blacktwo"
+                        android:alpha="0.2"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/theme_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/themes"
+                        android:drawablePadding="35dp"
+                        android:fontFamily="@font/poppins"
+                        android:padding="20dp"
+                        android:layout_weight="1"
+                        android:text="Theme"
+                        android:textColor="@color/blacktwo"
+                        android:textSize="14sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/theme_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginEnd="20dp"
+                            android:thumb="@drawable/custom_thumb"
+                            app:showText="false"
+                            app:track="@drawable/custom_track" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blacktwo"
+                        android:alpha="0.2"/>
+
+                    <TextView
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/logout"
+                        android:drawablePadding="35dp"
+                        android:fontFamily="@font/poppins"
+                        android:padding="20dp"
+                        android:text="Log Out"
+                        android:textColor="@color/blacktwo"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_subs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Subscription"
+                    android:visibility="gone"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/subs_set"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/crown" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:text="Go Premium"
+                            android:textColor="@color/pink"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_pre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:text="Get access to all features"
+                            android:textColor="#9910142B"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/native_ad"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="20dp"
+            android:orientation="vertical"
+            android:translationZ="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

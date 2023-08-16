@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:layout_marginStart="5dp">
+
+
+    <com.quarkworks.roundedframelayout.RoundedFrameLayout
+        android:id="@+id/refresh_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cornerRadiusTopLeft="10dp"
+        app:cornerRadiusTopRight="10dp"
+        app:cornerRadiusBottomLeft="10dp"
+        app:cornerRadiusBottomRight="10dp"
+        app:clippedBackgroundColor="@color/transparent"
+        app:borderColor="@color/transparent"
+        app:softBorderColor="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_item">
+
+            <ImageView
+                android:id="@+id/imageViewItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent"
+                android:src="@drawable/drip_1"
+                app:tint="@color/white"
+                android:scaleType="fitXY" />
+
+
+        </RelativeLayout>
+
+
+    </com.quarkworks.roundedframelayout.RoundedFrameLayout>
+
+
+    <View
+        android:id="@+id/selectedBorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:elevation="1dp"
+        android:background="@drawable/background_select"
+        android:visibility="gone" />
+
+</RelativeLayout>

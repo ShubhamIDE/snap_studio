@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blacktwo"
+    android:id="@+id/main_layout"
+    android:orientation="vertical">
+
+<!--    <com.solodroid.ads.sdk.ui.BannerAdView-->
+<!--        android:id="@+id/bannerAdView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_layout_confirm">
+
+        <com.photo.editor.snapstudio.PhEditor.utils.DripFrameLayout
+            android:id="@+id/frameLayoutBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.photo.editor.snapstudio.PhEditor.Editor.PolishDripView
+                    android:id="@+id/dripViewBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.photo.editor.snapstudio.PhEditor.Editor.PolishDripView
+                    android:id="@+id/dripViewImage"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.photo.editor.snapstudio.PhEditor.Editor.PolishDripView
+                    android:id="@+id/dripViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/drip_1"
+                    android:tint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.photo.editor.snapstudio.PhEditor.utils.DripFrameLayout>
+
+        <ProgressBar
+            android:id="@+id/crop_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:progress="0"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/card3"
+        android:paddingTop="8dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toTopOf="@id/rl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayoutEffect">
+
+            <ImageView
+                android:id="@+id/imageViewStyle"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:padding="9.5dp"
+                android:background="@drawable/background_selected_color"
+                android:src="@drawable/ic_drip"
+                app:tint="@color/pink"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewBg"/>
+
+            <ImageView
+                android:id="@+id/imageViewBg"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:padding="9.5dp"
+                android:src="@drawable/ic_background"
+                android:background="@drawable/background_unslelected"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStyle"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewColor"/>
+
+            <ImageView
+                android:id="@+id/imageViewColor"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:padding="9.5dp"
+                android:src="@drawable/ic_palette"
+                android:background="@drawable/background_unslelected"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewBg"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewEraser"/>
+
+            <ImageView
+                android:id="@+id/imageViewEraser"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:padding="9dp"
+                android:background="@drawable/background_unslelected"
+                android:src="@drawable/ic_eraser"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewColor"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutEffect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_confirm_blur">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_confirm_blur"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewCloseDrip"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_round_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/drip_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drip"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageViewSaveDrip"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_round_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/native_ads"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

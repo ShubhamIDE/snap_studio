@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/curvebt3" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:background="@drawable/curvebt3"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/smile" />
+
+        <TextView
+            android:id="@+id/rate_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:text="Rate us!"
+            android:textColor="@color/blacktwo"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/rate_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stars" />
+
+
+        <LinearLayout
+            android:id="@+id/native_ad"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginVertical="25dp"
+            android:elevation="20dp"
+            android:orientation="vertical"
+            android:translationZ="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:text="Are you sure, wants to exit application ?"
+            android:textColor="@color/blacktwo"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp">
+
+            <TextView
+                android:id="@+id/goback"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:text="No"
+                android:textAlignment="center"
+                android:textColor="@color/blacktwo"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/exit"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/curvebt4"
+                android:gravity="center"
+                android:text="Exit"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

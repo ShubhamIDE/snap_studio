@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:paddingStart="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+           <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:src="@drawable/pro" />
+
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/photo_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Photo Edit"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:drawableTopCompat="@drawable/photo_edit_btn" />
+
+                    <TextView
+                        android:id="@+id/collage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Collage"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:drawableTopCompat="@drawable/collage_btn" />
+
+                    <TextView
+                        android:id="@+id/ai_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="AI Image"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:drawableTopCompat="@drawable/ai_image_btn" />
+
+                    <TextView
+                        android:id="@+id/beauty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Beauty"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:drawableTopCompat="@drawable/beauty_btn" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/recent_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Recent"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recent_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="more"
+                    android:textColor="@color/pink"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/empty"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textColor="@color/pink"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:text="No Recent Works"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recent_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:listitem="@layout/project_item"/>
+
+            <LinearLayout
+                android:id="@+id/native_ads"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:elevation="20dp"
+                android:translationZ="20dp"
+                android:orientation="vertical" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:visibility="gone"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp" />
+
+            <LinearLayout
+                android:id="@+id/SliderDots"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:layout_below="@+id/viewpager"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/temp_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Templates"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/temp_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="more"
+                    android:textColor="@color/pink"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/temp_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:listitem="@layout/temp_item"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

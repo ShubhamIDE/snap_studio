@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/blacktwo"
+    android:elevation="2dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="8dp">
+
+    <com.photo.editor.snapstudio.PhEditor.views.SquareLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewCover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </RelativeLayout>
+
+    </com.photo.editor.snapstudio.PhEditor.views.SquareLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blacktwo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewCloseFinal"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:src="@drawable/ic_round_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imageViewSaveFinal"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:src="@drawable/ic_round_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <com.solodroid.ads.sdk.ui.BannerAdView-->
+        <!--            android:id="@+id/bannerAdView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"/>-->
+
+
+        <view
+            android:id="@+id/whittenimg"
+            class="com.photo.editor.snapstudio.PhEditor.draw.ImgViewTouchAndDraw"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutOption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <view
+            android:id="@+id/whittenimg1"
+            class="com.photo.editor.snapstudio.PhEditor.draw.ImgViewTouchAndDraw"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutOption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutOption"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="@drawable/card3"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutWhiten"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/image_view_whiten"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_enlarge_eyes" />
+
+                <TextView
+                    android:id="@+id/text_view_whiten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_whiten"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="WHITEN"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutEraser"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/relativeLayoutZoom"
+                app:layout_constraintStart_toEndOf="@+id/relativeLayoutWhiten"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/image_view_eraser"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_eraser" />
+
+                <TextView
+                    android:id="@+id/text_view_eraser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_eraser"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="ERASER"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutZoom"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/image_view_zoom"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_round_zoom_in" />
+
+                <TextView
+                    android:id="@+id/text_view_zoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_zoom"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="ZOOM"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/native_ads"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+</RelativeLayout>

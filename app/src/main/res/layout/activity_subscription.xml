@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    tools:context=".Activity.SubscriptionActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:paddingStart="10dp"
+            android:text="Subscription"
+            android:textColor="#DD81FF"
+            android:textSize="20sp" />
+
+           <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:src="@drawable/search" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/poppins"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/gptext"
+                android:textColor="@color/blacktwo"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="85dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/crown"
+                    android:elevation="10dp"
+                    android:padding="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:background="@drawable/card2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Go Premium"
+                            android:textColor="@color/pink"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Get access to all features"
+                            android:textColor="#9910142B"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="No commitment, cancel anytime"
+                            android:textColor="#9910142B"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/tv"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/year_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginHorizontal="35dp"
+                        android:background="@drawable/gradient2"
+                        android:elevation="10dp"
+                        android:padding="10dp"
+                        android:text="Most Popular"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/gpbg">
+
+                        <ImageView
+                            android:id="@+id/ytick"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="11dp"
+                            android:src="@drawable/gradient_tick"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Yearly"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/amt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/yearplan"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/amt"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/gptxt"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="10dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/gradient"
+                            android:fontFamily="@font/poppins"
+                            android:padding="10dp"
+                            android:text="Save 60%"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:id="@+id/month_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gpbg1">
+
+                    <ImageView
+                        android:id="@+id/mtick"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="11dp"
+                        android:src="@drawable/gradient_tick"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginVertical="50dp">
+
+                        <TextView
+                            android:id="@+id/txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Monthly"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/amt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt2"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins"
+                            android:text="@string/monthplan"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/amt2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="@string/gptxt"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

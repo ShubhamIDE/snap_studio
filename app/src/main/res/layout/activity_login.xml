@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Activity.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/splashlogo"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/splashlogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold|normal" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/google_login"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/rl_app"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/google" />
+
+    <TextView
+        android:id="@+id/guest_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/google_login"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/or_login_as_guest"
+        android:textSize="14sp" />
+
+</RelativeLayout>

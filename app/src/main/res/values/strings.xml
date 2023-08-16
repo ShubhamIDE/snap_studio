@@ -1,0 +1,181 @@
+<resources>
+    <string name="app_name">Snap Studio</string>
+
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="one"><font size="24"><b>Make collage</b></font> \n\n<font size="16">of your beautiful memories!</font></string>
+    <string name="two"><font size="24"><b>100+ Unique Stickers</b></font> \n\n<font size="16">to make your photos more attractive.</font></string>
+    <string name="three"><font size="24"><b>Erase</b></font> \n\n<font size="16">Unwanted items in one tap.</font></string>
+    <string name="four"><font size="24"><b>Start Editing Your\n\n Great Photos Easily</b></font></string>
+    <string name="getstarted">Get Started</string>
+    <string name="signintxt"><font size="28"><b>Lets sign you in</b></font> \n<font color="#B3000000" size="20">Welcome Back ,\nYou have been missed</font></string>
+    <string name="signuptxt"><font size="28"><b>Lets register account</b></font> \n<font color="#B3000000" size="20">Hello user , you have \na grateful journey</font></string>
+    <string name="password">Password</string>
+    <string name="signin">Sign in</string>
+    <string name="don_t_have_an_account_register_now"><font color="#555454">Don’t have an account ?</font><font color="#000000"> <u>Register Now</u></font></string>
+    <string name="already_have_an_account_login"><font color="#555454">Already have an account ?</font><font color="#000000"> <u>Login</u></font></string>
+    <string name="signup">Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit"><u>Edit</u></string>
+    <string name="sitxt"><b>Saved Successfully!!</b></string>
+    <string name="sitxt2">Saved to: Photo Editor Projects</string>
+
+    <string name="gptext">Ready to go VIP?</string>
+    <string name="gptxt">Subscription auto-renews</string>
+    <string name="yearplan"><font color="#FFFFFF" size="16"><b>Rs. 2,200/yr.</b></font><font color="#D9D9D9" size="10"> \n Rs. 183.33/mo</font></string>
+    <string name="monthplan"><font color="#FFFFFF" size="16"><b>Rs. 440/mo.</b></font></string>
+    <string name="waring_out_of_memory"><![CDATA[>Not enough memory. Please remove images or your program will be crashed.!!!]]></string>
+
+
+    <string-array name="filters">
+        <item>Color1</item>
+        <item>Color2</item>
+        <item>Duo</item>
+        <item>Pink</item>
+        <item>Fresh</item>
+        <item>Euro</item>
+        <item>Dark</item>
+        <item>Ins</item>
+        <item>Elegant</item>
+        <item>Golden</item>
+        <item>Tint</item>
+        <item>Film</item>
+        <item>Lomo</item>
+        <item>Movie</item>
+        <item>Retro</item>
+        <item>BW</item>
+    </string-array>
+
+
+    <string name="login"><b>Log in</b></string>
+    <string name="gs"><b>Get Started</b></string>
+    <string name="ahac">Already have an account? <b>Log in</b></string>
+    <string name="logintxt">Log in to YouShoot</string>
+    <string name="pp">By proceeding, I accept the Terms and Conditions and the Privacy Policy.</string>
+
+    <string name="swipeone">Make collage </string>
+    <string name="swipetwo">100+ Unique Stickers </string>
+    <string name="swipethree">Erase</string>
+    <string name="swipefour">Start editing your\n great photos easily</string>
+
+    <string name="swipeonet">of your beautiful memories!</string>
+    <string name="swipetwot">to make your photos more attractive</string>
+    <string name="swipethreet">Unwanted items in one tap</string>
+    <string name="swipefourt"> </string>
+    <string name="editing">Editing</string>
+    <string name="rate">Rate Us</string>
+    <string name="subscription">Subscription</string>
+    <string name="restore_purchase">Restore Purchase</string>
+    <string name="go_premium">Go Premium</string>
+    <string name="camera">Camera</string>
+    <string name="launch_with_camera">Launch with camera</string>
+    <string name="auto_save_photo">Auto save photo</string>
+    <string name="front_camera_mirror">Front camera mirror</string>
+    <string name="countdown_sound_effect">Countdown sound effect</string>
+    <string name="time_stamp">Time stamp</string>
+    <string name="photo_quality">Photo Quality</string>
+    <string name="smart_hd_pro">Smart HD Pro</string>
+    <string name="ultra_high">Ultra High</string>
+    <string name="high">High</string>
+    <string name="other">Other</string>
+    <string name="push_notification">Push Notification</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="p_privacy_policy"> • Privacy Policy • </string>
+    <string name="terms_amp_condition"><![CDATA[Terms & Condition]]></string>
+    <string name="settings">Settings</string>
+    <string name="saved_photos">Saved Photos</string>
+    <string name="saved_media">Saved Media</string>
+    <string name="empty_txt">You have not saved any photo at the moment!</string>
+    <string name="select_image">Select Image</string>
+
+    <string name="share_txt">Hey view/Share this image</string>
+    <string name="share_image_via">Share File via...</string>
+    <string name="directory" translatable="false">/.YouShoot/</string>
+    <string name="profile">Profile</string>
+    <string name="txt_not_detect_human">Human detection is failed. Please try again.</string>
+    <string name="enter_prompt">Prompt Can\'t Be Empty</string>
+    <string name="size_256">256 x 256</string>
+    <string name="size_512">512 x 512</string>
+    <string name="size_1024">1024 x 1024</string>
+
+    <string name="size">Size</string>
+    <string name="offset">Offset</string>
+    <string name="threshold">Threshold</string>
+    <string name="extract">Extract</string>
+    <string name="bg">Bg</string>
+    <string name="restore">Restore</string>
+    <string name="zoom">Zoom</string>
+    <string name="auto">Auto</string>
+    <string name="cut_inside">cut inside</string>
+    <string name="cut_outside">cut outside</string>
+    <string name="filter">Filter</string>
+    <string name="adjust">Adjust</string>
+    <string name="overlay">Overlay</string>
+    <string name="crop">Crop</string>
+    <string name="splash">Splash</string>
+    <string name="hsl">HSL</string>
+    <string name="sticker">Sticker</string>
+    <string name="text">Text</string>
+    <string name="blur">Blur</string>
+    <string name="mirror">Mirror</string>
+    <string name="paint">Paint</string>
+    <string name="ratio">Ratio</string>
+    <string name="square">Square</string>
+    <string name="beauty">Beauty</string>
+    <string name="body">Body</string>
+    <string name="eye">Eye</string>
+    <string name="cheek">Cheek</string>
+    <string name="whiten">Whiten</string>
+    <string name="face">Face</string>
+    <string name="lip">Lip</string>
+    <string name="enlarge">Enlarge</string>
+    <string name="dark">Dark</string>
+    <string name="brighten">Brighten</string>
+    <string name="eraser">Eraser</string>
+    <string name="redoing">Redoing</string>
+    <string name="undoing">Undoing</string>
+    <string name="import_img_warning">Please import image!!!</string>
+    <string name="importing_image">Importing image…</string>
+    <string name="import_error">Error while getting image.</string>
+
+
+    <string name="hue">Hue</string>
+    <string name="exposure">Exposure</string>
+    <string name="contrast">Contrast</string>
+    <string name="brightness">Brightness</string>
+    <string name="saturation">Saturation</string>
+    <string name="sharpen">Sharpen</string>
+    <string name="please_try_again">Please Try Again</string>
+    <string name="drip">Drip</string>
+    <string name="bg_change">BG</string>
+    <string name="neon">Neon</string>
+    <string name="wing">Wing</string>
+    <string name="color">Color</string>
+    <string name="opacity">Opacity</string>
+    <string name="effect_parameter_bundle_name">global parameter</string>
+    <string name="gallery_lib_max">Max %d</string>
+    <string name="gallery_no_more">No More %d item</string>
+    <string name="gallery_select_one">Select %d item</string>
+    <string name="Folder">Pictures</string>
+
+
+    <string name="cut">Cut</string>
+    <string name="compress">Compress</string>
+    <string name="rotate">Rotate</string>
+    <string name="reverse">Reverse</string>
+    <string name="fast">Fast</string>
+    <string name="slow">Slow</string>
+    <string name="toaudio">To Mp3</string>
+    <string name="togif">To GIF</string>
+    <string name="toimg">To Image</string>
+    <string name="upload"><font color="#FFFFFF">Upload on</font></string>
+    <string name="or_login_as_guest"><u>or Login as guest</u></string>
+
+    <string name="profileInfo">Set your profile picture</string>
+    <string name="chooseData">Choose from device</string>
+
+</resources>

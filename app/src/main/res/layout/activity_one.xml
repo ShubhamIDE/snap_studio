@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AiSearch.OneActivity">
+
+        <RelativeLayout
+            android:id="@+id/toola"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/backbt"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/backbt" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins"
+                android:text="Text to Image"
+                android:textColor="@color/blacktwo"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_below="@id/toola"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/native_ads"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ai_text_img" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/card2">
+
+                    <EditText
+                        android:id="@+id/promptEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Type here something to generate an image.."
+                        android:imeActionId="666"
+                        android:imeActionLabel="Enter"
+                        android:imeOptions="actionGo"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColorHint="#4D000000"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:paddingHorizontal="20dp"
+                    android:text="e.g Cute panda playing guitar"
+                    android:textColor="#4D000000"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/chooseImageSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/promptInputLayout">
+
+                    <RadioButton
+                        android:id="@+id/size256"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_flat_selector"
+                        android:button="@android:color/transparent"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/size_256"
+                        android:textColor="@drawable/radio_flat_text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/size512"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_flat_selector"
+                        android:button="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/size_512"
+                        android:textColor="@drawable/radio_flat_text_selector" />
+
+
+                    <RadioButton
+                        android:id="@+id/size1024"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_flat_selector"
+                        android:button="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/size_1024"
+                        android:textColor="@drawable/radio_flat_text_selector" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/generateButton"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="30dp"
+                    android:background="@drawable/curvebt"
+                    android:padding="13dp"
+                    android:text="Generate"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Activity.OnboardingActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/native_ads"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="afterDescendants">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/skip"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/curvebt"
+                    android:fontFamily="@font/poppins"
+                    android:paddingHorizontal="135dp"
+                    android:paddingVertical="15dp"
+                    android:text="@string/next"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/getstarted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/curvebt"
+                    android:fontFamily="@font/poppins"
+                    android:paddingHorizontal="110dp"
+                    android:paddingVertical="15dp"
+                    android:text="@string/getstarted"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="@string/skip"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/dot1"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_above="@id/rl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                app:dampingRatio="0.5"
+                app:dotsColor="@color/black"
+                app:dotsCornerRadius="25dp"
+                app:dotsSize="10dp"
+                app:dotsSpacing="2dp"
+                app:dotsStrokeColor="@color/grey"
+                app:dotsStrokeWidth="2dp"
+                app:stiffness="300" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/native_ads"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="vertical" />
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    android:background="@color/blacktwo"
+    android:orientation="vertical">
+
+<!--    <com.solodroid.ads.sdk.ui.BannerAdView-->
+<!--        android:id="@+id/bannerAdView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <com.photo.editor.snapstudio.PhEditor.views.SquareLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_layout_confirm">
+
+        <com.photo.editor.snapstudio.PhEditor.utils.DripFrameLayout
+            android:id="@+id/frameLayoutBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.photo.editor.snapstudio.PhEditor.Editor.PolishDripView
+                    android:id="@+id/dripViewBack"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.photo.editor.snapstudio.PhEditor.Editor.PolishDripView
+                    android:id="@+id/dripViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/frame_1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.photo.editor.snapstudio.PhEditor.utils.DripFrameLayout>
+
+    </com.photo.editor.snapstudio.PhEditor.views.SquareLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/card3"
+        app:layout_constraintBottom_toTopOf="@id/rl">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutEffect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_confirm_PixLab">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"/>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_confirm_PixLab"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+             <ImageView
+                    android:id="@+id/imageViewCloseSplash"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_round_close"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/textViewStyle"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/profile"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+            <ImageView
+                    android:id="@+id/imageViewSaveSplash"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_round_check"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/native_ads"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

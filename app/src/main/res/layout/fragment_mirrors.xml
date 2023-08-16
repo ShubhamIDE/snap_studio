@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blacktwo"
+    android:layout_width="match_parent"
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMirror"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutMirrorCont"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <FrameLayout
+            android:id="@+id/frameLayoutWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.photo.editor.snapstudio.PhEditor.views.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.photo.editor.snapstudio.PhEditor.views.SquareLayout
+                    android:id="@+id/squareLayout3d_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_2Layer
+                            android:id="@+id/drag3D_1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/mirror_3d_1_icon" />
+
+                        </com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_2Layer>
+
+                        <com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_2Layer
+                            android:id="@+id/drag3D_2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/mirror_3d_1_icon" />
+
+                        </com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_2Layer>
+                    </LinearLayout>
+
+                </com.photo.editor.snapstudio.PhEditor.views.SquareLayout>
+
+                <com.photo.editor.snapstudio.PhEditor.views.SquareLayout
+                    android:id="@+id/squareLayout3d_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_4Layer
+                            android:id="@+id/drag3D_3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/mirror_3d_1_icon" />
+
+                        </com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_4Layer>
+
+                        <com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_4Layer
+                            android:id="@+id/drag3D_4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/mirror_3d_1_icon" />
+
+                        </com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_4Layer>
+
+                        <com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_4Layer
+                            android:id="@+id/drag3D_5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/mirror_3d_1_icon" />
+
+                        </com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_4Layer>
+
+                        <com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_4Layer
+                            android:id="@+id/drag3D_6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/mirror_3d_1_icon" />
+
+                        </com.photo.editor.snapstudio.PhEditor.mirror.Mirror3D_4Layer>
+                    </LinearLayout>
+
+                </com.photo.editor.snapstudio.PhEditor.views.SquareLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout3D_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mirror_3d_1"
+                    android:visibility="gone"/>
+
+            </com.photo.editor.snapstudio.PhEditor.views.SquareLayout>
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMirrorCont"
+        android:background="@drawable/card3"
+        android:paddingTop="10dp"
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:orientation="horizontal"
+            android:id="@+id/recyclerViewMirror"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:layout_marginBottom="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_confirm_adjust"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_confirm_adjust"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewCloseMirror"
+                android:padding="8dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_round_close"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MIRROR"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
+                android:gravity="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageViewSaveMirror"
+                android:padding="8dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_round_check"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

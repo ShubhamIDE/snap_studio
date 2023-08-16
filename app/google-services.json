@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1026946246129",
+    "project_id": "snap-studio-bc803",
+    "storage_bucket": "snap-studio-bc803.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026946246129:android:c2a967b521a1759b2f9050",
+        "android_client_info": {
+          "package_name": "com.photo.editor.snapstudio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026946246129-g3qpfas1vo07olvsitehd36epsthn2kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJVctjxlU0pBkAdmzpOrgi6I2G8j9Qwtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026946246129-g3qpfas1vo07olvsitehd36epsthn2kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

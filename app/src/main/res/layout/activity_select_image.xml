@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    tools:context=".collage.Activity.SelectImageActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_selectedimage"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:elevation="10dp"
+        android:translationZ="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_imgcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Select upto 10 photo(s)"
+            android:textAlignment="center"
+            android:textColor="@color/blacktwo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_images"
+            android:layout_width="match_parent"
+            android:layout_height="90dp" />
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_imgcount"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:layout_margin="5dp"-->
+        <!--                android:text="Select upto 10 photo(s)"-->
+        <!--                android:textColor="@android:color/white" />-->
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_next"
+        android:layout_below="@+id/ll_selectedimage" />
+
+    <TextView
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:elevation="10dp"
+        android:translationZ="20dp"
+        android:padding="15dp"
+        android:text="Continue"
+        android:textAlignment="center"
+        android:textColor="@color/blacktwo"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

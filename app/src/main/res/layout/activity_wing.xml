@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blacktwo"
+    android:id="@+id/main_layout"
+    android:orientation="vertical">
+
+<!--    <com.solodroid.ads.sdk.ui.BannerAdView-->
+<!--        android:id="@+id/bannerAdView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_layout_confirm"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutRootView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                                android:id="@+id/imageViewBackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageViewWings"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <ImageView
+                                android:id="@+id/imageViewCover"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/crop_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:progress="0"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_layout_confirm"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/card3"
+        android:elevation="2dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/rl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_confirm_compare"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@id/recyclerViewWings">
+
+            <SeekBar
+                android:id="@+id/seekbarOpacity"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:max="100"
+                android:progress="100"
+                android:progressBackgroundTint="#C89393"
+                android:progressTint="@color/pink"
+                android:splitTrack="false"
+                android:thumbTint="@color/pink"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/image_view_eraser"/>
+
+            <ImageView
+                android:id="@+id/image_view_eraser"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:padding="8dp"
+                android:background="@drawable/background_unslelected"
+                android:backgroundTint="@color/blacktwo"
+                android:src="@drawable/ic_eraser"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewWings"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            tools:layout_editor_absoluteY="56dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewCloseWings"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_round_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WING"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageViewSaveWings"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_round_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/native_ads"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

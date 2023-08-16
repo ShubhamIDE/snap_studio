@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_close_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A6222222">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:elevation="2sp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/background_bottom"
+        android:backgroundTint="@color/transBackground">
+
+
+        <TextView
+            android:id="@+id/textViewExit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Warning"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewDiscard"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:layout_below="@+id/textViewExit"
+            android:text="Changing Bluriness will lose your current drawing progress"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerHorizontal="true"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/textViewDiscard">
+
+            <TextView
+                android:id="@+id/textViewCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background_unslelected"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textSize="15sp"
+                android:textColor="@color/pink"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/background_selected"
+                android:gravity="center"
+                android:text="Continue"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

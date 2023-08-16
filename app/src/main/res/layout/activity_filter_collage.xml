@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00020D"
+    android:gravity="center"
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
+    tools:context=".collage.Activity.FilterCollageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbt"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/backbt"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/img_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:adjustViewBounds="true"
+            android:text="Save"
+            android:textColor="@color/pink"
+            android:fontFamily="@font/poppins"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".98">
+
+        <ImageView
+            android:id="@+id/img_collage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card3"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/filter_names"
+            android:layout_width="match_parent"
+            android:layout_height="34dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_filterstype"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/native_ads"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+    </RelativeLayout>
+
+</LinearLayout>

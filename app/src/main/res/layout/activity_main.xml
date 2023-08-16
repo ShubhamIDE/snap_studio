@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/app_bar"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbt"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/backbt" />
+
+        <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:adjustViewBounds="true"
+            android:text="Save"
+            android:textColor="@color/pink"
+            android:fontFamily="@font/poppins"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="Happy New Year Photo Frame"
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            android:visibility="visible" />
+
+        <!--        <com.google.android.gms.ads.AdView-->
+        <!--            android:id="@+id/ad_view"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:visibility="visible"-->
+        <!--            ads:adSize="SMART_BANNER"-->
+        <!--            ads:adUnitId="@string/banner_ad_unit_id" />-->
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/mainFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="380dp"
+            android:layout_height="500dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="#ffffffff">
+
+            <FrameLayout
+                android:id="@+id/framecontainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bgImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+
+                <com.photo.editor.snapstudio.Templates.custom.TouchImageView
+                    android:id="@+id/imgSize"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:id="@+id/frameContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:id="@+id/rr_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dip"
+                            android:layout_weight="0.5">
+
+                            <ImageView
+                                android:id="@+id/iv_1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="matrix" />
+
+                            <ImageView
+                                android:id="@+id/imgOverlayView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal|top"
+                                android:scaleType="fitXY" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/main_img"
+                        android:background="#ffffff">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/main_img"
+                        android:background="#ffffff">
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/main_img"
+                        android:layout_width="380dp"
+                        android:layout_height="500dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/main_img"
+                        android:background="#ffffff" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/main_img"
+                        android:background="#ffffff">
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <com.photo.editor.snapstudio.Templates.custom.StickerBtn
+                    android:id="@+id/sticker_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blacktwo"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:numColumns="3"
+            android:padding="4dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp"
+            android:visibility="gone" />
+
+        <SeekBar
+            android:id="@+id/seekOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="60dp"
+            android:padding="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/card3"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#444"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/imgFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Frames"
+                    android:drawableTint="@color/blacktwo"
+                    android:fontFamily="@font/poppins"
+                    android:drawableTop="@drawable/ic_ratio"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="14sp" />
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgFrame"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:clickable="true"-->
+<!--                    android:src="@drawable/selector_frame" />-->
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/imgGallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Gallery"
+                    android:drawableTint="@color/blacktwo"
+                    android:fontFamily="@font/poppins"
+                    android:drawableTop="@drawable/ic_outline_add_photo_alternate_24"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="14sp" />
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgGallery"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:clickable="true"-->
+<!--                    android:src="@drawable/selector_gallery" />-->
+            </LinearLayout>
+
+
+            <!--<LinearLayout-->
+
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/imgOverlay"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:clickable="true"-->
+            <!--android:src="@drawable/selector_overlay" />-->
+            <!--</LinearLayout>-->
+
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/imgSticker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Stickers"
+                    android:drawableTint="@color/blacktwo"
+                    android:fontFamily="@font/poppins"
+                    android:drawableTop="@drawable/ic_sticker"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="14sp" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgSticker"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:clickable="true"-->
+<!--                    android:src="@drawable/selector_sticker" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/imgText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Add Text"
+                    android:drawableTint="@color/blacktwo"
+                    android:fontFamily="@font/poppins"
+                    android:drawableTop="@drawable/ic_text"
+                    android:textColor="@color/blacktwo"
+                    android:textSize="14sp" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgText"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:clickable="true"-->
+<!--                    android:src="@drawable/selector_text" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/native_ads"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="bottom"
+            android:visibility="gone"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
